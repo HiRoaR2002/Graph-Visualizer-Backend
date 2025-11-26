@@ -11,10 +11,9 @@
  * Environment:
  *   NEO4J_URI, NEO4J_USER, NEO4J_PASS (optional; defaults used in config)
  */
-
+import "dotenv/config";
 import driver from "../config/neo4j.js";
 import { randomUUID } from "crypto";
-
 const TOTAL_TX = parseInt(process.env.TOTAL_TX || "100000", 10);
 const N_USERS = parseInt(process.env.N_USERS || "1000", 10);
 const BATCH = parseInt(process.env.BATCH || "1000", 10); // transactions per batch
