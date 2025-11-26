@@ -8,8 +8,7 @@ const NEO4J_PASS = process.env.NEO4J_PASS || "password";
 // For Neo4j Desktop (NO SSL):
 const driver = neo4j.driver(
   NEO4J_URI,
-  neo4j.auth.basic(NEO4J_USER, NEO4J_PASS),
-  { encrypted: "ENCRYPTION_OFF" } // IMPORTANT FIX
+  neo4j.auth.basic(NEO4J_USER, NEO4J_PASS)
 );
 
 export default driver;
