@@ -13,7 +13,7 @@ app.use(cors({
 app.use(express.json({ limit: "5mb" }));
 const neo4j = process.env.NEO4J_URI;
 
-console.log("neo URL", neo4j)
+// console.log("neo URL", neo4j)
 // API routes
 app.use("/users", usersRouter);
 app.use("/transactions", transactionsRouter);
